@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bangalore Wheels | Car & Bike Rentals</title>
+
+<style>
+/* RESET */
+*{
+  margin:0; padding:0; box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+body{
+  background:#f4f6f8; color:#333; line-height:1.6;
+}
+
+/* HEADER / NAV */
+header{
+  background:linear-gradient(90deg,#0f172a,#1f3a93);
+  color:#fff; padding:16px 8%;
+  display:flex; align-items:center; justify-content:space-between;
+}
+header h1{font-size:1.6rem;}
+nav a{
+  color:#fff; text-decoration:none; margin-left:18px; font-weight:600;
+}
+nav a:hover{color:#38bdf8;}
+
+/* HERO */
+.hero{
+  height:65vh;
+  background:url("RENTAL.jpg")
+           center/cover no-repeat;
+  display:flex; align-items:center; justify-content:center; text-align:center;
+}
+.hero .overlay{
+  background:rgba(0,0,0,.6); color:#fff;
+  padding:28px 32px; border-radius:12px;
+}
+.hero h2{font-size:2.6rem; margin-bottom:10px;}
+.hero p{opacity:.95; margin-bottom:16px;}
+.hero button{
+  padding:12px 26px; border:none; border-radius:6px;
+  background:#38bdf8; color:#0f172a; font-weight:700; cursor:pointer;
+}
+
+/* MAIN SECTIONS */
+section{padding:56px 8%;}
+section h2{
+  text-align:center; font-size:2rem; color:#0f172a; margin-bottom:28px;
+}
+
+/* CARDS GRID */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+}
+.card{
+  background:#fff; border-radius:14px; overflow:hidden;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+  transition:transform .25s;
+}
+.card:hover{transform:translateY(-6px);}
+.card img{
+  width:100%; height:180px; object-fit:cover;
+}
+.card .content{padding:16px;}
+.card h3{color:#0f172a; margin-bottom:6px;}
+.card p{font-size:.95rem;}
+.price{margin-top:8px; font-weight:700; color:#1f3a93;}
+
+/* VIDEO */
+.video-wrap{
+  max-width:900px; margin:0 auto;
+}
+.video-wrap video{
+  width:100%; border-radius:16px;
+}
+
+/* SERVICES */
+.services{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+.service{
+  background:#fff; padding:18px; border-radius:12px;
+  box-shadow:0 6px 14px rgba(0,0,0,.1);
+}
+.service span{font-size:1.4rem;}
+
+/* BOOKING */
+.booking{
+  max-width:520px; margin:0 auto;
+  background:#fff; padding:26px; border-radius:14px;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+.booking input, .booking select, .booking button{
+  width:100%; padding:10px; margin:10px 0;
+}
+.booking button{
+  background:#0f172a; color:#fff; border:none; border-radius:6px;
+  font-size:1rem; cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a; color:#fff; text-align:center;
+  padding:22px; margin-top:48px;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .hero h2{font-size:1.9rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>Bangalore Wheels</h1>
+  <nav>
+    <a href="#cars">Cars</a>
+    <a href="#bikes">Bikes</a>
+    <a href="#services">Services</a>
+    <a href="#book">Book</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="overlay">
+    <h2>Rent Cars & Bikes in Bangalore</h2>
+    <p>Affordable • Reliable • Self-Drive</p>
+    <button>Book Now</button>
+  </div>
+</div>
+
+<!-- CARS -->
+<section id="cars">
+  <h2>Popular Cars on Rent</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="MARUTI.jpg">
+      <div class="content">
+        <h3>Maruti Swift</h3>
+        <p>Fuel-efficient hatchback for city rides.</p>
+        <div class="price">₹1,199 / day</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="HONDA CITY.jpg">
+      <div class="content">
+        <h3>Honda City</h3>
+        <p>Comfortable sedan for long journeys.</p>
+        <div class="price">₹1,799 / day</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Mahindra Scorpio.jpg">
+      <div class="content">
+        <h3>Mahindra Scorpio</h3>
+        <p>Powerful SUV for highways & trips.</p>
+        <div class="price">₹2,499 / day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIKES -->
+<section id="bikes">
+  <h2>Popular Bikes on Rent</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="Royal Enfield.jpg">
+      <div class="content">
+        <h3>Royal Enfield</h3>
+        <p>Classic touring motorcycle.</p>
+        <div class="price">₹499 / day</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Bajaj Pulsar.jpg">
+      <div class="content">
+        <h3>Bajaj Pulsar</h3>
+        <p>Sporty bike for city & highway.</p>
+        <div class="price">₹399 / day</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="TVS Jupiter.jpg">
+      <div class="content">
+        <h3>TVS Jupiter</h3>
+        <p>Easy scooter for daily commute.</p>
+        <div class="price">₹299 / day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section>
+  <h2>Experience Bangalore on Wheels</h2>
+  <div class="video-wrap">
+    <video controls autoplay muted loop>
+      <source src="istockphoto-2162593861-640_adpp_is.mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Why Choose Us</h2>
+  <div class="services">
+    <div class="service"><span>✔</span> Self-Drive Vehicles</div>
+    <div class="service"><span>✔</span> 24/7 Support</div>
+    <div class="service"><span>✔</span> Well-Maintained Fleet</div>
+    <div class="service"><span>✔</span> Flexible Plans</div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="book">
+  <h2>Book Your Ride</h2>
+  <div class="booking">
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <select required>
+        <option value="">Select Vehicle Type</option>
+        <option>Car</option>
+        <option>Bike</option>
+      </select>
+      <input type="date" required>
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Bangalore Wheels | Car & Bike Rentals</p>
+</footer>
+
+</body>
+</html>
